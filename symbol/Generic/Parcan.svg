@@ -15,6 +15,12 @@
         <polyline
             id="south"
             points="0 75" />
+		<polyline
+			id="east"
+			points="75 0" />
+		<polyline
+			id="west"
+			points="-75 0" />
     </g>
 </g>
 </svg>

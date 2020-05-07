@@ -20,6 +20,12 @@
         <polyline
             id="south"
             points="0 200" />
+		<polyline
+			id="east"
+			points="175 0" />
+		<polyline
+			id="west"
+			points="-175 0" />
     </g>
 </g>
 </svg>

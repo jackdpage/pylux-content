@@ -2,10 +2,6 @@ p {
     font-family: "CMU Sans Serif", Verdana, Sans serif;
 }
 
-#parent {
-    padding: 1px;
-}
-
 .title-production {
     font-size: 5pt;
     font-style: italic;
@@ -53,8 +49,7 @@ p {
 .legend p {
     font-size: 3pt;
     display: inline-block;
-    vertical-align: text-top;
-    margin: 0;
+    vertical-align: middle;
 }
 
 .notation {

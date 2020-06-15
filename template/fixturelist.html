@@ -2,28 +2,30 @@
 <html>
 <head>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.0.3/milligram.min.css" rel="stylesheet" />
-    <title>{{ metadata['Production'] }} Fixture List</title>
+    <title>{{ metadata['production'] }} Fixture List</title>
 </head>
 <body>
-<h1>{{ metadata['Production'] }} Fixture List</h1>
+<h1>{{ metadata['production'] }} Fixture List</h1>
 <table>
     <thead>
         <tr>
             <th>Fixture #</th>
             <th>Name</th>
             <th>Type</th>
-            <th>Power</th>
+            <th>Position</th>
+	    <th>Focus</th>
             <th>Gel</th>
         </tr>
     </thead>
     <tbody>
     {% for fixture in fixtures %}
         <tr>
-            <td>{{ fixture['ref'] }}</td>
-            <td>{{ fixture['name'] }}</td>
-            <td>{{ fixture['fixture-type'] }}</td>
-            <td>{{ fixture['power'] }}W</td>
-            <td><div style="width:15px;height:15px;background-color:{{ fixture['colour'] }};display:inline-block;vertical-align:middle;margin-right:5px"></div> {{ fixture['gel'] }}</td>
+            <td>{{ fixture.ref }}</td>
+            <td>{{ fixture.label }}</td>
+            <td>{{ fixture.data['fixture-type'] }}</td>
+            <td>{{ fixture.data['pos'] }}</td>
+	    <td>{{ fixture.data['focus'] }}</td>
+            <td><div style="width:15px;height:15px;background-color:{{ fixture.data['colour'] }};display:inline-block;vertical-align:middle;margin-right:5px"></div> {{ fixture.data['gel'] }}</td>
         </tr>
     {% endfor %}
     </tbody>
